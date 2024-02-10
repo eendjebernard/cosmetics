@@ -6,6 +6,7 @@ run-paper = "2.2.2"
 plugin-yml = "0.6.0"
 
 lamp = "3.1.7"
+configurate = "4.1.2"
 
 [plugins]
 kotlin = { id = "org.jetbrains.kotlin.jvm", version.ref = "kotlin" }
@@ -17,3 +18,5 @@ plugin-yml = { id = "net.minecrell.plugin-yml.bukkit", version.ref = "plugin-yml
 [libraries]
 lamp-common = { module = "com.github.Revxrsal.Lamp:common", version.ref = "lamp" }
 lamp-bukkit = { module = "com.github.Revxrsal.Lamp:bukkit", version.ref = "lamp" }
+configurate-core = { module = "org.spongepowered:configurate-core", version.ref = "configurate" }
+configurate-hocon = { module = "org.spongepowered:configurate-hocon", version.ref = "configurate" }

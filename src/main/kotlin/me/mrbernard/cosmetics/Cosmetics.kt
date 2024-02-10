@@ -1,12 +1,12 @@
-package me.mrbernard.plugintemplate
+package me.mrbernard.cosmetics
 
 import org.bukkit.plugin.java.JavaPlugin
 
-class PluginTemplate : JavaPlugin() {
+class Cosmetics : JavaPlugin() {
 
     companion object {
 
-        lateinit var INSTANCE: PluginTemplate
+        lateinit var INSTANCE: Cosmetics
 
     }
 

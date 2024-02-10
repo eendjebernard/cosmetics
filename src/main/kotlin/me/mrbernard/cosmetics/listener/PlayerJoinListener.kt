@@ -1,4 +1,4 @@
-package me.mrbernard.plugintemplate.listener
+package me.mrbernard.cosmetics.listener
 
 import net.kyori.adventure.text.minimessage.MiniMessage
 import org.bukkit.event.EventHandler

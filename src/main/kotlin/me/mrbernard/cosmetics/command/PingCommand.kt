@@ -1,4 +1,4 @@
-package me.mrbernard.plugintemplate.command
+package me.mrbernard.cosmetics.command
 
 import net.kyori.adventure.text.Component
 import revxrsal.commands.annotation.Command

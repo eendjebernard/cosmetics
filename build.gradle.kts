@@ -6,9 +6,8 @@ plugins {
     alias(libs.plugins.plugin.yml)
 }
 
-group = "me.mrbernard.plugintemplate"
+group = "me.mrbernard.cosmetics"
 version = "1.0"
-description = "Easy and fast plugin template with all the important libraries already imported"
 
 repositories {
     maven("https://jitpack.io")
@@ -19,6 +18,9 @@ dependencies {
 
     implementation(libs.lamp.common)
     implementation(libs.lamp.bukkit)
+
+    implementation(libs.configurate.core)
+    implementation(libs.configurate.hocon)
 }
 
 tasks {
@@ -27,8 +29,8 @@ tasks {
 }
 
 bukkit {
-    name = "PluginTemplate"
-    main = "me.mrbernard.plugintemplate.PluginTemplate"
+    name = "Cosmetics"
+    main = "me.mrbernard.cosmetics.Cosmetics"
     apiVersion = "1.20.4"
     authors = listOf("Mr_Bernard_")
 }

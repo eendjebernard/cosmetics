@@ -1,0 +1,19 @@
+[versions]
+kotlin = "1.9.22"
+shadow = "8.1.1"
+paperweight = "1.5.11"
+run-paper = "2.2.2"
+plugin-yml = "0.6.0"
+
+lamp = "3.1.7"
+
+[plugins]
+kotlin = { id = "org.jetbrains.kotlin.jvm", version.ref = "kotlin" }
+shadow = { id = "com.github.johnrengelman.shadow", version.ref = "shadow" }
+paperweight = { id = "io.papermc.paperweight.userdev", version.ref = "paperweight" }
+run-paper = { id = "xyz.jpenilla.run-paper", version.ref = "run-paper" }
+plugin-yml = { id = "net.minecrell.plugin-yml.bukkit", version.ref = "plugin-yml" }
+
+[libraries]
+lamp-common = { module = "com.github.Revxrsal.Lamp:common", version.ref = "lamp" }
+lamp-bukkit = { module = "com.github.Revxrsal.Lamp:bukkit", version.ref = "lamp" }

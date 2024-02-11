@@ -24,13 +24,13 @@ dependencies {
 }
 
 tasks {
-    assemble { dependsOn(shadowJar) }
+    assemble { dependsOn(shadowJar); dependsOn(reobfJar) }
     compileKotlin { kotlinOptions.jvmTarget = "17" }
 }
 
 bukkit {
     name = "Cosmetics"
     main = "me.mrbernard.cosmetics.Cosmetics"
-    apiVersion = "1.20.4"
+    apiVersion = "1.20"
     authors = listOf("Mr_Bernard_")
 }

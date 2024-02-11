@@ -1,6 +1,6 @@
-package me.mrbernard.cosmetics
+package me.mrbernard.cosmetics.listener
 
-import me.mrbernard.cosmetics.listener.PlayerJoinListener
+import me.mrbernard.cosmetics.Cosmetics
 import org.bukkit.Bukkit
 
 object ListenerManager {

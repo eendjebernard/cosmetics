@@ -11,6 +11,11 @@ class InteractiveItemStack(
     private val lore: Array<Component> = arrayOf()
 ) {
 
+    constructor(
+        itemStack: ItemStack,
+        displayName: Component? = null,
+    ) : this(itemStack.type, displayName ?: itemStack.displayName(), itemStack.lore()?.toTypedArray() ?: arrayOf())
+
     var onClickAction: InventoryClickEvent.() -> Unit = {}
     var onLeftClickAction: InventoryClickEvent.() -> Unit = {}
     var onRightClickAction: InventoryClickEvent.() -> Unit = {}

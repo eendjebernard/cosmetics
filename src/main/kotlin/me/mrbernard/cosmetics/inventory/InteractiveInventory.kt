@@ -8,19 +8,14 @@ import org.bukkit.event.Listener
 import org.bukkit.event.inventory.ClickType
 import org.bukkit.event.inventory.InventoryClickEvent
 import org.bukkit.event.inventory.InventoryCloseEvent
-import org.bukkit.inventory.Inventory
 import org.bukkit.inventory.InventoryHolder
 
-class InteractiveInventory() : InventoryHolder, Listener {
+open class InteractiveInventory() : InventoryHolder, Listener {
 
-    private var inventory = Bukkit.createInventory(this, 9 * 6)
+    val menuInventory = Bukkit.createInventory(this, 9 * 6)
     private val itemsPerSlot = hashMapOf<Int, InteractiveItemStack>()
 
     private var onCloseAction: InventoryCloseEvent.() -> Unit = {}
-
-    constructor(inventory: Inventory) : this() {
-        this.inventory = inventory
-    }
 
     init {
         registerAsListener()
@@ -44,7 +39,7 @@ class InteractiveInventory() : InventoryHolder, Listener {
     }
 
     fun setItem(slot: Int, item: InteractiveItemStack) {
-        inventory.setItem(slot, item.build())
+        menuInventory.setItem(slot, item.build())
         itemsPerSlot[slot] = item
     }
 
@@ -55,5 +50,5 @@ class InteractiveInventory() : InventoryHolder, Listener {
 
     fun registerAsListener() = Bukkit.getServer().pluginManager.registerEvents(this, Cosmetics.INSTANCE)
 
-    override fun getInventory() = inventory
+    override fun getInventory() = menuInventory
 }

@@ -1,8 +1,8 @@
 package me.mrbernard.cosmetics
 
-import me.mrbernard.cosmetics.inventory.InteractiveItemStack
-import net.kyori.adventure.text.Component
-import org.bukkit.Material
+import me.mrbernard.cosmetics.command.CommandManager
+import me.mrbernard.cosmetics.config.Config
+import me.mrbernard.cosmetics.listener.ListenerManager
 import org.bukkit.plugin.java.JavaPlugin
 
 class Cosmetics : JavaPlugin() {
@@ -18,5 +18,11 @@ class Cosmetics : JavaPlugin() {
 
         CommandManager
         ListenerManager
+
+        if (!dataFolder.exists()) dataFolder.mkdir()
+    }
+
+    override fun onDisable() {
+        Config.COSMETIC_INVENTORY.save()
     }
 }

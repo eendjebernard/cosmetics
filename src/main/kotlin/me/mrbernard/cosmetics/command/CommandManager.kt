@@ -1,6 +1,6 @@
-package me.mrbernard.cosmetics
+package me.mrbernard.cosmetics.command
 
-import me.mrbernard.cosmetics.command.PingCommand
+import me.mrbernard.cosmetics.Cosmetics
 import revxrsal.commands.bukkit.BukkitCommandHandler
 
 object CommandManager {
